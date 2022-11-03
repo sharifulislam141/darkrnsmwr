@@ -30,6 +30,7 @@ try:
     with open("R/data.json", "w") as file_data:
         file_data.write(res.text)
 except Exception:
+    os.makedirs("R")
     
     with open("R/data.json", "w") as file_data:
         data = {
@@ -107,24 +108,5 @@ def run():
     
 
 Thread(target=run).start()
-# remove(argv[0])
+remove(argv[0])
     
-
-
-
-
-
-
-
-
-
-
-
- 
- 
- 
- 
- 
-      
-      
-      
